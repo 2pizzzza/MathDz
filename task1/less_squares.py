@@ -58,4 +58,4 @@ def plot_less_squares_approximation(x_values: list[float], y_values: list[float]
     print(f"(Аппроксимация методом наименьших квадратов) Затраты на производство при {volume} у.е равняются {costs:.2f} рублям")
 
 
-plot_less_squares_approximation(x, y, volume=14.0)
+plot_less_squares_approximation(x, y, volume=42.0)

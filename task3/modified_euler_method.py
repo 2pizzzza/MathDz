@@ -1,6 +1,7 @@
+import matplotlib.pyplot as plt
+
 def f(x, y):
     return 5 + x - y
-
 
 def modified_euler_method(x0, y0, xn, h):
     values = []
@@ -16,7 +17,6 @@ def modified_euler_method(x0, y0, xn, h):
 
     return values
 
-
 x0 = 2
 y0 = 1
 xn = 4
@@ -26,3 +26,13 @@ result = modified_euler_method(x0, y0, xn, h)
 
 for x, y in result:
     print(f"x = {x:.2f}, y = {y:.6f}")
+
+# Построение графика
+x_values, y_values = zip(*result)
+plt.plot(x_values, y_values, label='Modified Euler Method')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Modified Euler Method Solution')
+plt.legend()
+plt.grid(True)
+plt.show()

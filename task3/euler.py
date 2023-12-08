@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def euler_method(func, y0, x0, xn, h):
     x_values = [x0]
     y_values = [y0]
@@ -15,7 +17,6 @@ def euler_method(func, y0, x0, xn, h):
 def differential_equation(x, y):
     return 5 + x - y
 
-
 if __name__ == "__main__":
     x0 = 2
     y0 = 1
@@ -26,3 +27,12 @@ if __name__ == "__main__":
 
     for x, y in zip(x_values, y_values):
         print(f"x = {x:.2f}, y = {y:.6f}")
+
+    # Построение графика
+    plt.plot(x_values, y_values, label='Euler Method')
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('Euler Method Solution')
+    plt.legend()
+    plt.grid(True)
+    plt.show()

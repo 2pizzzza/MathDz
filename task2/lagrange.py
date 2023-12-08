@@ -2,8 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from task2.value import x, y
-
-
 def lagrange(x: list[float], y: list[float], x0: float) -> float | None:
 
     if len(x) != len(y) or len(x) == 0:

@@ -47,7 +47,7 @@ def plot_quadratic_approximation(x_values: list[float], y_values: list[float], v
     print(f"{a = }, {b = }, {c = }\n")
     print(f"(Квадратичная аппроксимация) {volume} у.е равняются {y_approximated:.2f} ")
 
-x: list[float] = [1.2, 2, 2.6, 3.2, 3.6, 4.1, 5.0, 5.9, 7.2, 7.3]
-y: list[float] = [120, 250, 322, 365, 430, 480, 555, 605, 643, 675]
+x: list[float] = [14, 15, 17, 19, 20, 21, 22, 24, 27, 32]
+y: list[float] = [300, 340, 401, 470, 540, 602, 640, 680, 731, 880]
 plot_quadratic_approximation(x, y, volume=8.0)
 
